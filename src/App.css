@@ -1,0 +1,79 @@
+.house {
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+@media screen and (min-width: 768px) {
+  .house {
+    margin: 100px auto;
+  }
+}
+
+.house__headline {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .house__headline {
+    margin-bottom: 50px;
+  }
+}
+
+.house__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  max-width: 800px;
+}
+
+.house__item {
+  padding: 20px 0 20px 20px;
+  border-bottom: 1px solid grey;
+  position: relative;
+}
+
+.house__item::before {
+  content: "›";
+  font-size: 25px;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  color: inherit;
+  transition: color 0.2s ease;
+}
+
+.house__item:hover .house__link {
+  color: orange;
+  letter-spacing: 0.5px;
+}
+
+.house__item:hover::before {
+  color: orange;
+}
+
+.house__link {
+  color: black;
+  font-size: 22px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.house__details {
+  list-style-type: none;
+  margin: 20px 0;
+  padding-left: 15px;
+  display: none;
+}
+
+ .house__details--active {
+  display: block;
+}
+
+.house__details-headline {
+  font-size: 18px;
+}
+
+.house__details-item {
+  font-size: 16px;
+  padding: 5px 0;
+}
